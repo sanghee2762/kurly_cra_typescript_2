@@ -1,0 +1,30 @@
+1. 리액트 프로젝트 새로 만드는 경우
+npx create-react-app  type_app  --template typescript
+
+
+2.제작완료된 마켓컬리 회원가입폼 포트폴리오 => typescript 적용하기
+npm i typescript @types/node  @types/react  @types/react-dom
+
+
+
+
+12/12 깃배포
+https://github.com/sanghee2762/kurly_cra_typescript.git
+
+
+1. git init  깃만들기
+2. ls -la    목록보여달라
+3. git config user.name  
+<명령어>
+   이름  : git config user.name 'sanghee2762'
+   이메일 :  git config user.email 'ssh2762@naver.com'
+<확인명령어>
+git config user.name
+git config user.email
+
+4. git remote add origin https://github.com/sanghee2762/kurly_cra_typescript.git
+5. git remote -v   오리진 확인 
+6. git add .
+7. git commit -m "마켓컬리 회원가입 CRA 타입스크립트 사용"
+8. <주소올리기>
+ git push origin master 
