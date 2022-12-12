@@ -9,7 +9,9 @@ npm i typescript @types/node  @types/react  @types/react-dom
 
 
 12/12 깃배포
-https://github.com/sanghee2762/kurly_cra_typescript.git
+https://github.com/sanghee2762/kurly_cra_typescript.git 배포완료
+
+https://github.com/sanghee2762/kurly_cra_typescript_2.git 원본파일
 
 
 1. git init  깃만들기
@@ -22,9 +24,103 @@ https://github.com/sanghee2762/kurly_cra_typescript.git
 git config user.name
 git config user.email
 
-4. git remote add origin https://github.com/sanghee2762/kurly_cra_typescript.git
+4. git remote add origin https://github.com/sanghee2762/kurly_cra_typescript.git  
+
+git remote add origin https://github.com/sanghee2762/kurly_cra_typescript_2.git
+
 5. git remote -v   오리진 확인 
 6. git add .
 7. git commit -m "마켓컬리 회원가입 CRA 타입스크립트 사용"
 8. <주소올리기>
  git push origin master 
+
+////////////////////////////////////////////////////////////////
+
+배포하기(페이징) (깃설정, 환경설정 ,스테이징,커밋 ,푸쉬하기 ,배포주소)
+
+
+1) 상단메뉴 settings 클릭
+2) 좌측 중간 하단에 pages 메뉴클릭
+3) 상단 GitHub Pages
+4) Branch
+   GitHub Pages is currently disabled. Select a source below to enable GitHub Pages for this repository. Learn more.
+
+   master /  Save
+4-1)
+ None 클릭 -> 목록상자 master 선택 -> 우측 save 클릭 -> 새로고침(f5)   
+
+배포 주소
+https://sanghee2762.github.io/kurly_cra_typescript/
+
+30초대기
+//////////////////////////////////////////////////////////////////////////
+
+   배포주소 링크타고 들어가서 Deployment클릭 스크롤쭈욱하면 GitFub Pages가있다  
+      Deployment 주소: https://create-react-app.dev/docs/deployment/
+
+5) Deployment  =>  GitFub Pages
+
+** 5-1)  Step 1: Add homepage to package.json  
+
+      ( 패키지제이슨 수정)
+      (맨 아래쪽에 추가한다)
+      package.json = > 깃허브 배포주소 속성과 주소 추가
+"homepage":https://sanghee2762.github.io/kurly_cra_typescript/
+
+** 5-2)  Step 2: Install gh-pages and add deploy to scripts in package.json
+      gh-pages => npm i gh-pages 설치
+                  npm install --save gh-pages
+
+5-3) 패키지 제이슨 디버그 추가
+
+ "predeploy": "npm run build", 
+ "deploy": "gh-pages -b master -d build",
+
+
+
+5-4) Step 3: Deploy the site by running npm run deploy
+   
+    npm run deploy
+
+//////////////////////////////////////////////////////////////////
+
+6)  배포 끝 
+   1분정도 기다렸다가 배포주소 링크 
+  https://sanghee2762.github.io/kurly_cra_typescript/
+
+7) 웹브라우저를 띄운다
+  배포주소를 입력엔터 => 홈페이지 띄우고 배포확인완료!!
+   https://sanghee2762.github.io/kurly_cra_typescript/
+/////////////////////////////////
+
+
+
+
+
+웹브라우저에 배포주소련연결 끝
+
+   git remoto -v
+   git remote add origin https://github.com/sanghee2762/just_shop.git
+   git remote -v
+1) git add .
+2) git commit -m '리액트 저스트 쇼핑몰 CRA원본 소스'
+3) git push origin master
+
+새로고침 소스 원본 확인 끝
+
+
+(화면청소명령어)
+clear 
+/////////////////////////////////////////중요///////////////////////
+
+package.json -- >   "scripts": {
+                     "predeploy": "npm run build",            <--  **이거랑 추가됨
+                      "deploy": "gh-pages -b master -d build", <-- **이거랑 추가됨
+                     "start": "react-scripts start",
+                     "build": "react-scripts build",
+                      }
+              --->  "homepage": "https://sanghee2762.github.io/green_shop/"     
+
+    "homepage": 기본으로
+    "https://sanghee2762.github.io/green_shop/"  배포주소   
+/////////////////////////////////////////////////////////////////
